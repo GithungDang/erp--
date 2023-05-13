@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>38a67b06-af8d-4b48-978c-6423b1b31a5e</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>DataSet</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BusinessTier" />
+    <Compile Include="Global.cs" />
+    <Compile Include="DataSet\IComputerPlayerModel.cs" />
+    <Compile Include="DataSet\IOrderModel.cs" />
+    <Compile Include="DataSet\TEighthComputerPlayerModel.cs" />
+    <Compile Include="DataSet\TElevenComputerPlayerModel.cs" />
+    <Compile Include="DataSet\TFifteenComputerPlayerModel.cs" />
+    <Compile Include="DataSet\TFifthComputerPlayerModel.cs" />
+    <Compile Include="DataSet\TFifthOrderModel.cs" />
+    <Compile Include="DataSet\TFirstComputerPlayerModel.cs" />
+    <Compile Include="DataSet\TFirstOrderModel.cs" />
+    <Compile Include="DataSet\TFourteenComputerPlayerModel.cs" />
+    <Compile Include="DataSet\TFourthComputerPlayerModel.cs" />
+    <Compile Include="DataSet\TFourthOrderModel.cs" />
+    <Compile Include="DataSet\TNinthComputerPlayerModel.cs" />
+    <Compile Include="DataSet\TSecondComputerPlayerModel.cs" />
+    <Compile Include="DataSet\TSecondOrderModel.cs" />
+    <Compile Include="DataSet\TSeventeenComputerPlayerModel.cs" />
+    <Compile Include="DataSet\TSeventhComputerPlayerModel.cs" />
+    <Compile Include="DataSet\TSixteenComputerPlayerModel.cs" />
+    <Compile Include="DataSet\TSixthComputerPlayerModel.cs" />
+    <Compile Include="DataSet\TTenthComputerPlayerModel.cs" />
+    <Compile Include="DataSet\TThirdComputerPlayerModel.cs" />
+    <Compile Include="DataSet\TThirdOrderModel.cs" />
+    <Compile Include="DataSet\TThirteenComputerPlayerModel.cs" />
+    <Compile Include="DataSet\TTwelveComputerPlayerModel.cs" />
+  </ItemGroup>
+</Project>

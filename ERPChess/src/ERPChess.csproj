@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>4b215b4c-ca99-4310-bae7-cf7f9e6c453f</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>ERPChess</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="BusinessTier" />
+    <Reference Include="TabStripControlLibrary" />
+    <Reference Include="ZedGraph" />
+    <Reference Include="DataSet" />
+    <Reference Include="DataAccessTier" />
+    <Compile Include="Global.cs" />
+    <Compile Include="ERPChess\Properties\Resources.cs" />
+    <Compile Include="ERPChess\Properties\Settings.cs" />
+    <Compile Include="ERPChess\frmArm.cs" />
+    <Compile Include="ERPChess\frmBMSCX.cs" />
+    <Compile Include="ERPChess\frmByePlant.cs" />
+    <Compile Include="ERPChess\frmCJDHH.cs" />
+    <Compile Include="ERPChess\frmCPYFTZ.cs" />
+    <Compile Include="ERPChess\frmDiscount.cs" />
+    <Compile Include="ERPChess\frmGXCQDK.cs" />
+    <Compile Include="ERPChess\frmGXDQDK.cs" />
+    <Compile Include="ERPChess\frmGXSC.cs" />
+    <Compile Include="ERPChess\frmGXYSK.cs" />
+    <Compile Include="ERPChess\frmGZ.cs" />
+    <Compile Include="ERPChess\frmHelp.cs" />
+    <Compile Include="ERPChess\frmJHGKH.cs" />
+    <Compile Include="ERPChess\frmJTZJ.cs" />
+    <Compile Include="ERPChess\frmKSXDSC.cs" />
+    <Compile Include="ERPChess\frmLoansharking.cs" />
+    <Compile Include="ERPChess\frmLogInControl.cs" />
+    <Compile Include="ERPChess\frmMainControl.cs" />
+    <Compile Include="ERPChess\frmOver.cs" />
+    <Compile Include="ERPChess\frmRegistration.cs" />
+    <Compile Include="ERPChess\frmSalePlant.cs" />
+    <Compile Include="ERPChess\frmShowBusinessPerformanceRanking.cs" />
+    <Compile Include="ERPChess\frmShowBusinessResult.cs" />
+    <Compile Include="ERPChess\frmShowGLD.cs" />
+    <Compile Include="ERPChess\frmShowheroeslist.cs" />
+    <Compile Include="ERPChess\frmShowLongTermLoans.cs" />
+    <Compile Include="ERPChess\frmShowShortTermLoans.cs" />
+    <Compile Include="ERPChess\frmShowTableInfor.cs" />
+    <Compile Include="ERPChess\frmSuccess.cs" />
+    <Compile Include="ERPChess\frmTZXSCX.cs" />
+    <Compile Include="ERPChess\frmXNNGHHY.cs" />
+    <Compile Include="ERPChess\frmXSCZR.cs" />
+    <Compile Include="ERPChess\frmXYLDD.cs" />
+    <Compile Include="ERPChess\frmYCLRK.cs" />
+    <Compile Include="ERPChess\frmZDXNDJH.cs" />
+    <Compile Include="ERPChess\frmZFSBXLF.cs" />
+    <Compile Include="ERPChess\frmZFXZGLFY.cs" />
+    <Compile Include="ERPChess\frmZFYFS.cs" />
+    <Compile Include="ERPChess\frmZFZJ.cs" />
+    <Compile Include="ERPChess\Program.cs" />
+    <Compile Include="ERPChess\TGlobals.cs" />
+    <EmbeddedResource Include="ERPChess.Properties.Resources.resources" />
+    <EmbeddedResource Include="ERPChess.frmLoansharking.resources" />
+    <EmbeddedResource Include="ERPChess.frmLogInControl.resources" />
+    <EmbeddedResource Include="ERPChess.frmArm.resources" />
+    <EmbeddedResource Include="ERPChess.frmBMSCX.resources" />
+    <EmbeddedResource Include="ERPChess.frmByePlant.resources" />
+    <EmbeddedResource Include="ERPChess.frmCJDHH.resources" />
+    <EmbeddedResource Include="ERPChess.frmCPYFTZ.resources" />
+    <EmbeddedResource Include="ERPChess.frmDiscount.resources" />
+    <EmbeddedResource Include="ERPChess.frmGXCQDK.resources" />
+    <EmbeddedResource Include="ERPChess.frmGXDQDK.resources" />
+    <EmbeddedResource Include="ERPChess.frmGXSC.resources" />
+    <EmbeddedResource Include="ERPChess.frmGXYSK.resources" />
+    <EmbeddedResource Include="ERPChess.frmGZ.resources" />
+    <EmbeddedResource Include="ERPChess.frmHelp.resources" />
+    <EmbeddedResource Include="ERPChess.frmJHGKH.resources" />
+    <EmbeddedResource Include="ERPChess.frmJTZJ.resources" />
+    <EmbeddedResource Include="ERPChess.frmKSXDSC.resources" />
+    <EmbeddedResource Include="ERPChess.frmMainControl.resources" />
+    <EmbeddedResource Include="ERPChess.frmOver.resources" />
+    <EmbeddedResource Include="ERPChess.frmRegistration.resources" />
+    <EmbeddedResource Include="ERPChess.frmSalePlant.resources" />
+    <EmbeddedResource Include="ERPChess.frmShowBusinessPerformanceRanking.resources" />
+    <EmbeddedResource Include="ERPChess.frmShowBusinessResult.resources" />
+    <EmbeddedResource Include="ERPChess.frmShowGLD.resources" />
+    <EmbeddedResource Include="ERPChess.frmShowheroeslist.resources" />
+    <EmbeddedResource Include="ERPChess.frmShowLongTermLoans.resources" />
+    <EmbeddedResource Include="ERPChess.frmShowShortTermLoans.resources" />
+    <EmbeddedResource Include="ERPChess.frmShowTableInfor.resources" />
+    <EmbeddedResource Include="ERPChess.frmSuccess.resources" />
+    <EmbeddedResource Include="ERPChess.frmTZXSCX.resources" />
+    <EmbeddedResource Include="ERPChess.frmXNNGHHY.resources" />
+    <EmbeddedResource Include="ERPChess.frmXSCZR.resources" />
+    <EmbeddedResource Include="ERPChess.frmXYLDD.resources" />
+    <EmbeddedResource Include="ERPChess.frmYCLRK.resources" />
+    <EmbeddedResource Include="ERPChess.frmZDXNDJH.resources" />
+    <EmbeddedResource Include="ERPChess.frmZFSBXLF.resources" />
+    <EmbeddedResource Include="ERPChess.frmZFXZGLFY.resources" />
+    <EmbeddedResource Include="ERPChess.frmZFYFS.resources" />
+    <EmbeddedResource Include="ERPChess.frmZFZJ.resources" />
+  </ItemGroup>
+</Project>

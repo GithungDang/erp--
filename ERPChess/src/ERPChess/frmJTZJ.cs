@@ -1,0 +1,108 @@
+﻿namespace ERPChess
+{
+    using System;
+    using System.ComponentModel;
+    using System.Drawing;
+    using System.Windows.Forms;
+
+    public class frmJTZJ : Form
+    {
+        private IContainer components;
+        private Button buttonOK;
+        private Button buttonCancel;
+        private GroupBox groupBox2;
+        private RichTextBox richTextBox2;
+
+        public frmJTZJ()
+        {
+            this.InitializeComponent();
+        }
+
+        private void buttonOK_Click(object sender, EventArgs e)
+        {
+            int equipment = TGlobals.currentActor.CurrBusinessConditions.OperatingSheet.Equipment;
+            int num2 = 0;
+            int num3 = Convert.ToInt16(Math.Round((double) ((equipment * 2.0) / 3.0), 0));
+            if ((equipment < 3) && (equipment > 0))
+            {
+                num2 = 1;
+                num3 = equipment - num2;
+            }
+            if (equipment >= 3)
+            {
+                num2 = Convert.ToInt16(Math.Round((double) ((equipment * 1.0) / 3.0), 0));
+                num3 = equipment - num2;
+            }
+            TGlobals.currentActor.CurrBusinessConditions.OperatingSheet.Equipment = num3;
+            TGlobals.currentActor.CurrBusinessConditions.FinancialSheet.Depreciation += num2;
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (this.components != null))
+            {
+                this.components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        private void InitializeComponent()
+        {
+            this.buttonOK = new Button();
+            this.buttonCancel = new Button();
+            this.groupBox2 = new GroupBox();
+            this.richTextBox2 = new RichTextBox();
+            this.groupBox2.SuspendLayout();
+            base.SuspendLayout();
+            this.buttonOK.DialogResult = DialogResult.OK;
+            this.buttonOK.Location = new Point(340, 0x80);
+            this.buttonOK.Name = "buttonOK";
+            this.buttonOK.Size = new Size(0x4b, 0x17);
+            this.buttonOK.TabIndex = 0;
+            this.buttonOK.Text = "确定";
+            this.buttonOK.UseVisualStyleBackColor = true;
+            this.buttonOK.Click += new EventHandler(this.buttonOK_Click);
+            this.buttonCancel.DialogResult = DialogResult.Cancel;
+            this.buttonCancel.Location = new Point(0x1a5, 0x80);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new Size(0x4b, 0x17);
+            this.buttonCancel.TabIndex = 1;
+            this.buttonCancel.Text = "取消";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.richTextBox2);
+            this.groupBox2.Location = new Point(12, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new Size(0x1e7, 110);
+            this.groupBox2.TabIndex = 0x4e;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "说明";
+            this.richTextBox2.BackColor = SystemColors.Window;
+            this.richTextBox2.BorderStyle = BorderStyle.None;
+            this.richTextBox2.Dock = DockStyle.Fill;
+            this.richTextBox2.Font = new Font("宋体", 10.5f, FontStyle.Regular, GraphicsUnit.Point, 0x86);
+            this.richTextBox2.Location = new Point(3, 0x11);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ReadOnly = true;
+            this.richTextBox2.Size = new Size(0x1e1, 90);
+            this.richTextBox2.TabIndex = 1;
+            this.richTextBox2.Text = "    年度折旧反映为机器设备价值的降低。采用余额递减法折旧率为33%(四舍五入取整)。当设备的价值将少于3M时，每年折旧以1M计，再建生产线、厂房不计提折旧。\n 本步系统自动完成。";
+            base.AutoScaleDimensions = new SizeF(6f, 12f);
+            base.AutoScaleMode = AutoScaleMode.Font;
+            base.CancelButton = this.buttonCancel;
+            base.ClientSize = new Size(0x1fb, 160);
+            base.Controls.Add(this.groupBox2);
+            base.Controls.Add(this.buttonCancel);
+            base.Controls.Add(this.buttonOK);
+            base.FormBorderStyle = FormBorderStyle.FixedDialog;
+            base.MaximizeBox = false;
+            base.MinimizeBox = false;
+            base.Name = "frmJTZJ";
+            base.ShowInTaskbar = false;
+            base.StartPosition = FormStartPosition.CenterScreen;
+            this.Text = "frmJTZJ";
+            this.groupBox2.ResumeLayout(false);
+            base.ResumeLayout(false);
+        }
+    }
+}
+

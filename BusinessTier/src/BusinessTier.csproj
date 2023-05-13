@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>cbb78d94-c0f9-44d2-98dc-ab5eaab6b02e</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>BusinessTier</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Management" />
+    <Compile Include="Global.cs" />
+    <Compile Include="BusinessTier\ISOQualify.cs" />
+    <Compile Include="BusinessTier\Market.cs" />
+    <Compile Include="BusinessTier\PlantAttribute.cs" />
+    <Compile Include="BusinessTier\PlantName.cs" />
+    <Compile Include="BusinessTier\ProductAttribute.cs" />
+    <Compile Include="BusinessTier\ProductLineAttribute.cs" />
+    <Compile Include="BusinessTier\ProductLineName.cs" />
+    <Compile Include="BusinessTier\Quarter.cs" />
+    <Compile Include="BusinessTier\TActor.cs" />
+    <Compile Include="BusinessTier\TAdvCostOfPlayer.cs" />
+    <Compile Include="BusinessTier\TAdvertising.cs" />
+    <Compile Include="BusinessTier\TBalanceSheet.cs" />
+    <Compile Include="BusinessTier\TBusinessConditions.cs" />
+    <Compile Include="BusinessTier\TCashFlowSheet.cs" />
+    <Compile Include="BusinessTier\TComprehensiveCostSheet.cs" />
+    <Compile Include="BusinessTier\TComputerPlayer.cs" />
+    <Compile Include="BusinessTier\TFinancialSheet.cs" />
+    <Compile Include="BusinessTier\TISOQualify.cs" />
+    <Compile Include="BusinessTier\TLoanSharking.cs" />
+    <Compile Include="BusinessTier\TLoanSharkingSheet.cs" />
+    <Compile Include="BusinessTier\TLongTermLoans.cs" />
+    <Compile Include="BusinessTier\TLongTermLoansSheet.cs" />
+    <Compile Include="BusinessTier\TOperatingSheet.cs" />
+    <Compile Include="BusinessTier\TOrder.cs" />
+    <Compile Include="BusinessTier\TOrderSheet.cs" />
+    <Compile Include="BusinessTier\TPlant.cs" />
+    <Compile Include="BusinessTier\TProduct.cs" />
+    <Compile Include="BusinessTier\TProductLine.cs" />
+    <Compile Include="BusinessTier\TProductWarehouse.cs" />
+    <Compile Include="BusinessTier\TRawMaterial.cs" />
+    <Compile Include="BusinessTier\TR1.cs" />
+    <Compile Include="BusinessTier\TR2.cs" />
+    <Compile Include="BusinessTier\TR3.cs" />
+    <Compile Include="BusinessTier\TR4.cs" />
+    <Compile Include="BusinessTier\TRawMaterialOrder.cs" />
+    <Compile Include="BusinessTier\TRawMaterialStock.cs" />
+    <Compile Include="BusinessTier\TRegistration.cs" />
+    <Compile Include="BusinessTier\TScoreRecord.cs" />
+    <Compile Include="BusinessTier\TShortTermLoans.cs" />
+    <Compile Include="BusinessTier\TShortTermLoansSheet.cs" />
+    <Compile Include="BusinessTier\TWorkShop.cs" />
+    <Compile Include="BusinessTier\Year.cs" />
+  </ItemGroup>
+</Project>
